@@ -39,7 +39,7 @@ Switch::Switch(uint8_t pinOne, bool inverted): Component(COMPONENT_TYPE_SWITCH) 
 Switch::Switch(uint8_t pinOne, uint8_t pinTwo, bool inverted): Component(COMPONENT_TYPE_SWITCH) {
   add(m_outputOne = new ButtonOutput());
   add(m_outputTwo = new ButtonOutput());
-  add(m_outputThree = new ButtonOutput());
+  //add(m_outputThree = new ButtonOutput());
 
   pinMode(pinOne, INPUT_PULLUP);
   pinMode(pinTwo, INPUT_PULLUP);
@@ -60,7 +60,7 @@ void Switch::update(Joystick_* joystick) {
     bool stateTwo = !digitalRead(m_pinTwo);
 
     m_outputOne->update(joystick, stateOne);
-    m_outputThree->update(joystick, stateTwo);
+    m_outputTwo->update(joystick, stateTwo);
 
     // Activate the second output (middle position) if both of the other pins
     // are not active.

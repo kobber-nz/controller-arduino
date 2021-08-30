@@ -6,13 +6,13 @@ Controller controller("DEV-2", 2);
 void setup() {
   Serial.begin(9600);
 
-  controller.add( new Button(5) );
-  controller.add( new Button(6) );
+  controller.add( new Switch(5,6, NORMAL) );
+  controller.add( new Button(4) );
 
   controller.begin();
 }
 
 void loop() {
   controller.update();
-  delay(50);
+  delay(20);
 }

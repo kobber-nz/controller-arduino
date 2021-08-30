@@ -72,7 +72,7 @@ class Switch: public Component {
   private:
     ButtonOutput* m_outputOne;
     ButtonOutput* m_outputTwo;
-    ButtonOutput* m_outputThree;
+    //ButtonOutput* m_outputThree;
 
     uint8_t m_pinOne;
     uint8_t m_pinTwo;

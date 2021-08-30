@@ -9,12 +9,10 @@
 
 // The keyboard library (https://github.com/arduino-libraries/Keyboard)
 // is used to emulate key presses on the connected pc.
-#include "Keyboard/Keyboard.h"
+//#include "Keyboard/Keyboard.h"
 
 #include "Components.h"
-#include "Dispatcher.h"
-
-#define CONTROLLER_VERSION "DEV"
+//#include "Dispatcher.h"
 
 /** 
  * The primary class that handles all emulation and communication to the

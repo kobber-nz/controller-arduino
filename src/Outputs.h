@@ -3,14 +3,14 @@
 
 #include <Arduino.h>
 #include "Joystick/Joystick.h"
-#include "Keyboard/Keyboard.h"
-#include "Storage/Storage.h"
-#include "Dispatcher.h"
+//#include "Keyboard/Keyboard.h"
+//#include "Storage/Storage.h"
+//#include "Dispatcher.h"
 
 #define TOTAL_OUTPUT_TYPES 2
 #define OUTPUT_TYPE_BUTTON 0
 #define OUTPUT_TYPE_AXIS 1
-#define KEYS_PER_OUTPUT 3
+//#define KEYS_PER_OUTPUT 3
 
 class Output {
   public:
@@ -29,7 +29,7 @@ class Output {
     uint8_t type = 0;
 
     // Stores the key codes binded to the output.
-    uint8_t keys[KEYS_PER_OUTPUT] = {0};
+    //uint8_t keys[KEYS_PER_OUTPUT] = {0};
 };
 
 class ButtonOutput: public Output {

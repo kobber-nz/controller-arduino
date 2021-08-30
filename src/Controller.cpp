@@ -6,7 +6,7 @@ Controller::Controller(char* code, uint16_t version) {
 }
 
 void Controller::begin() {
-  Keyboard.begin();
+  //Keyboard.begin();
   
   // This array is used to enable/disable the different axis on the joystick.
   // It does this by setting the amount of 'true' values in the array to the
@@ -58,6 +58,7 @@ void Controller::add(Component* comp) {
 }
 
 void Controller::update() {
+  /*
   if (Serial.available() > 0) {
     uint8_t bufferSize = 0;
     uint8_t buffer[8] = {};
@@ -101,6 +102,7 @@ void Controller::update() {
       Dispatcher.configMode = buffer[1];
     }
   }
+  */
 
   for(uint8_t i = 0; i < m_compsTotal; i++) {
     m_comps[i]->update(m_joystick);
