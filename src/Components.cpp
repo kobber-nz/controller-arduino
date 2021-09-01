@@ -30,7 +30,7 @@ void Button::update(Joystick_* joystick) {
 Switch::Switch(uint8_t pinOne, bool inverted): Component(COMPONENT_TYPE_SWITCH) {
   // The switch requires two button outputs (one for each position).
   add(m_outputOne = new ButtonOutput());
-  add(m_outputTwo = new ButtonOutput());
+  //add(m_outputTwo = new ButtonOutput());
 
   pinMode(pinOne, INPUT_PULLUP);
   m_inverted = inverted;

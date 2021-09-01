@@ -16,8 +16,8 @@ void ButtonOutput::init() {
   }
   */
 }
-void ButtonOutput::configure(uint8_t* config) {
-  /*
+/*void ButtonOutput::configure(uint8_t* config) {
+  
   for (uint8_t i = 0; i < KEYS_PER_OUTPUT; i++) {
     if (keys[i] != config[i]) {
       keys[i] = config[i];
@@ -26,8 +26,8 @@ void ButtonOutput::configure(uint8_t* config) {
       EEPROM.write((id*KEYS_PER_OUTPUT)+i, config[i]);
     }
   }
-  */
-}
+  
+}*/
 void ButtonOutput::update(Joystick_* joystick, bool state) {
   if (m_state == state) return;
 
@@ -64,7 +64,7 @@ void ButtonOutput::update(Joystick_* joystick, bool state) {
 
 AxisOutput::AxisOutput(): Output(OUTPUT_TYPE_AXIS) {}
 void AxisOutput::init() {}
-void AxisOutput::configure(uint8_t value) {}
+//void AxisOutput::configure(uint8_t value) {}
 void AxisOutput::update(Joystick_* joystick, uint16_t state) {
   if (m_state == state) return;
 

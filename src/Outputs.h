@@ -17,7 +17,7 @@ class Output {
     Output(uint8_t type);
 
     virtual void init();
-    virtual void configure(uint8_t* config);
+    //virtual void configure(uint8_t* config);
     //virtual void update(Joystick_* joystick, bool value);
     //virtual void update(Joystick_* joystick, int value);
 
@@ -36,7 +36,7 @@ class ButtonOutput: public Output {
   public:
     ButtonOutput();
     void init();
-    void configure(uint8_t* config);
+    //void configure(uint8_t* config);
     void update(Joystick_* joystick, bool state);
 
   private:
@@ -47,7 +47,7 @@ class AxisOutput: public Output {
   public:
     AxisOutput();
     void init();
-    void configure(uint8_t value);
+    //void configure(uint8_t value);
     void update(Joystick_* joystick, uint16_t state);
 
   private:

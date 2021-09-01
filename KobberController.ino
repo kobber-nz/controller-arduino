@@ -4,8 +4,6 @@
 Controller controller("DEV-2", 2);
 
 void setup() {
-  Serial.begin(9600);
-
   controller.add( new Switch(5,6, NORMAL) );
   controller.add( new Button(4) );
 
